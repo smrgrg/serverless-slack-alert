@@ -1,0 +1,18 @@
+{
+  "name": "serverless-slack-alert",
+  "version": "1.0.4",
+  "description": "Package for alerting slack while deploying serverless functions.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sameer Gurung",
+  "license": "ISC",
+  "keywords": [
+    "serverless", "slack-alert", "nodejs", "serverless plugin"],
+
+  "dependencies": {
+    "@types/node": "^12.12.17",
+    "js-yaml": "^3.13.1"
+  }
+}
