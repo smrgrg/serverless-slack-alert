@@ -1,6 +1,6 @@
 {
   "name": "serverless-slack-alert",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Package for alerting slack while deploying serverless functions.",
   "main": "index.js",
   "scripts": {
@@ -8,6 +8,10 @@
   },
   "author": "Sameer Gurung",
   "license": "ISC",
+  "homepage": "https://github.com/smrgrg/serverless-slack-alert",
+  "repository": {
+    "directory": "https://github.com/smrgrg/serverless-slack-alert"
+  },
   "keywords": [
     "serverless", "slack-alert", "nodejs", "serverless plugin"],
 
