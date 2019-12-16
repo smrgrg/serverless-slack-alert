@@ -1,6 +1,6 @@
 {
   "name": "serverless-slack-alert",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Package for alerting slack while deploying serverless functions.",
   "main": "index.js",
   "scripts": {
