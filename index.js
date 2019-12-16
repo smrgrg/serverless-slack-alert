@@ -52,7 +52,6 @@ class SlackAlert {
 
             request.post(options, function (error, response, body) {
                 if (error) console.error(error);
-                if (response) console.log(response);
             });
 
         } catch (e) {
