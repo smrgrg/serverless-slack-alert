@@ -1,5 +1,5 @@
 'use strict';
-const https = require('https');
+const request = require("request");
 const yaml = require('js-yaml');
 const fs   = require('fs');
 
@@ -46,29 +46,14 @@ class SlackAlert {
             }(this.sls.service.service, this.options);
 
             const options = {
-                hostname: 'hooks.slack.com',
-                path: this.hooksURL,
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Content-Length': message.length
-                }
+                url: this.hooksURL,
+                body: message
             };
 
-            const req = https.request(options, res => {
-                console.log(`statusCode: ${res.statusCode}`);
-
-                res.on('data', d => {
-                    process.stdout.write(d)
-                })
+            request.post(options, function (error, response, body) {
+                if (error) console.error(error);
+                if (response) console.log(response);
             });
-
-            req.on('error', error => {
-                console.error(error)
-            });
-
-            req.write(message);
-            req.end();
 
         } catch (e) {
             console.error(e);
